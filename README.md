@@ -43,8 +43,5 @@ The dataset consists of HR data with 14,999 samples, containing two types of emp
 6. **Evaluate model performance using classification metrics.**
 7. **Deploy the model using Streamlit.**
 
-## Prerequisites
-
-Before diving into the project, ensure that you have a basic understanding of Python coding, model deployment, and familiarity with Distance-Based, Bagging, Boosting algorithms, and Confusion Matrices. Feel free to explore additional models and methods to enhance your model metrics.
 
 Let's embark on this exciting journey of Employee Churn Analysis!
