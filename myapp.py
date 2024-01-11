@@ -20,23 +20,23 @@ st.sidebar.subheader('Select the properties of the employee')
 #satisfaction level
 sl_min = df_new.satisfaction_level.min()
 sl_max = df_new.satisfaction_level.max()
-satisfaction_level = st.sidebar.number_input("Satisfaction Level", min_value=sl_min,max_value=sl_max)
+satisfaction_level = st.sidebar.number_input("Satisfaction Level", min_value=sl_min,max_value=sl_max,value=0.82)
 #number of projects
 np_min = df_new.number_project.min()
 np_max = df_new.number_project.max()
-number_project = st.sidebar.slider("Number of Project", min_value=np_min,max_value=np_max,step=1)
+number_project = st.sidebar.slider("Number of Project", min_value=np_min,max_value=np_max,step=1,value=6)
 #time spent in the company
 ts_min = df_new.time_spend_company.min()
 ts_max = df_new.time_spend_company.max()
-time_spend_company = st.sidebar.slider("Time-Spend in the Company", min_value=ts_min,max_value=ts_max,step=1)
+time_spend_company = st.sidebar.slider("Time-Spend in the Company", min_value=ts_min,max_value=ts_max,step=1,value=7)
 #average worked hours in a month
 ah_min = df_new.average_montly_hours.min()
 ah_max = df_new.average_montly_hours.max()
-average_montly_hours = st.sidebar.number_input("Average-Worked Hours in a Month", min_value=ah_min, max_value=ah_max)
+average_montly_hours = st.sidebar.number_input("Average-Worked Hours in a Month", min_value=ah_min, max_value=ah_max,value=310)
 #last evaluation
 le_min = df_new.last_evaluation.min()
 le_max = df_new.last_evaluation.max()
-last_evaluation=st.sidebar.number_input("Last Evaluation", min_value=le_min,max_value=le_max)
+last_evaluation=st.sidebar.number_input("Last Evaluation", min_value=le_min,max_value=le_max,value=0.82)
 
 
 
@@ -67,9 +67,10 @@ df_example = pd.DataFrame.from_dict([my_dict])
 
 if predict:
     if model.predict(df_example)[0]==1:
-        st.success('The employee will stay!',icon="✅")
-    else:
         st.error('The employee will quit!',icon="🚨")
+    else:
+       
+        st.success('The employee will stay!',icon="✅")
     
 
 
